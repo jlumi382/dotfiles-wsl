@@ -1,5 +1,4 @@
 -- set mapleaders before importing plugins
-
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
