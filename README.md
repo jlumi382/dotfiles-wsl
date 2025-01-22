@@ -82,7 +82,7 @@ ubuntu config --default-user lumi
 ```sh
 sudo add-apt-repository ppa:neovim-ppa/unstable
 sudo apt update
-sudo apt install git stow zoxide eza bat neovim valgrind gdb python3 python3-pip python3-venv npm sqlite3 texlive-full tree-sitter-cli zathura
+sudo apt install git stow zoxide eza bat neovim valgrind gdb python3 python3-pip python3-venv nodejs npm sqlite3 texlive-full tree-sitter-cli zathura
 sudo apt purge vim
 sudo apt autoremove
 ```
