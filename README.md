@@ -1,5 +1,17 @@
 # Windows Dotfiles with WSL
 
+## Install Visual Studio
+
+```bat
+winget install --id=Microsoft.VisualStudio.2022.Community -e
+```
+
+## Install Unity Hub
+
+```bat
+winget install --id=Unity.UnityHub -e
+```
+
 ## Install JetBrainsMono Nerd Font
 
 1. Go to `JetBrainsMonoNerdFont` folder.
