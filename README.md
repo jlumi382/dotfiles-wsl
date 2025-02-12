@@ -80,21 +80,35 @@ ubuntu config --default-user lumi
 ## Install Neovim
 
 ```sh
-#!/usr/bin/env bash
+cd "$HOME/dotfiles"
+./install_nvim.sh
+```
 
-git clone -b v0.10.4 https://github.com/neovim/neovim.git $HOME/repos/neovim
-sudo apt install cmake gettext lua5.1 liblua5.1-0-dev
+## Install Yazi
 
-cd $HOME/repos/neovim
-make CMAKE_BUILD_TYPE=RelWithDebInfo
-sudo make install
+```sh
+sudo apt install ffmpeg 7zip jq poppler-utils fd-find ripgrep fzf zoxide imagemagick
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+rustup update
+git clone https://github.com/sxyazi/yazi.git "$HOME/repos/sxyazi/yazi"
+cd "$HOME/repos/sxyazi/yazi"
+cargo build --release --locked
+ya pack -a DreamMaoMao/clipboard
+```
+
+## Install Zotero
+
+```sh
+wget -qO- https://raw.githubusercontent.com/retorquere/zotero-deb/master/install.sh | sudo bash
+sudo apt update
+sudo apt install zotero
 ```
 
 ## Install My Core Packages
 
 ```sh
 sudo apt update
-sudo apt install git stow zoxide eza bat fzf build-essential manpages-dev valgrind gdb python3 python3-pip python3-venv nodejs npm sqlite3 texlive-full tree-sitter-cli zathura
+sudo apt install git stow eza bat pass build-essential manpages-dev valgrind gdb python3 python3-pip python3-venv nodejs npm php php-xml composer sqlite3 texlive-full tree-sitter-cli zathura
 sudo apt purge vim
 sudo apt autoremove
 ```
