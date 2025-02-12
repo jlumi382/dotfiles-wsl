@@ -82,7 +82,7 @@ ubuntu config --default-user lumi
 ```sh
 #!/usr/bin/env bash
 
-git clone -b v0.10.1 https://github.com/neovim/neovim.git $HOME/repos/neovim
+git clone -b v0.10.4 https://github.com/neovim/neovim.git $HOME/repos/neovim
 sudo apt install cmake gettext lua5.1 liblua5.1-0-dev
 
 cd $HOME/repos/neovim
