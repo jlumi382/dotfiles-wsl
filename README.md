@@ -77,12 +77,24 @@ useradd --create-home --shell /usr/bin/bash --user-group --groups  adm,dialout,c
 ubuntu config --default-user lumi
 ```
 
+## Install Neovim
+
+```sh
+#!/usr/bin/env bash
+
+git clone -b v0.10.1 https://github.com/neovim/neovim.git $HOME/repos/neovim
+sudo apt install cmake gettext lua5.1 liblua5.1-0-dev
+
+cd $HOME/repos/neovim
+make CMAKE_BUILD_TYPE=RelWithDebInfo
+sudo make install
+```
+
 ## Install My Core Packages
 
 ```sh
-sudo add-apt-repository ppa:neovim-ppa/unstable
 sudo apt update
-sudo apt install git stow zoxide eza bat neovim build-essential manpages-dev valgrind gdb python3 python3-pip python3-venv nodejs npm sqlite3 texlive-full tree-sitter-cli zathura
+sudo apt install git stow zoxide eza bat fzf build-essential manpages-dev valgrind gdb python3 python3-pip python3-venv nodejs npm sqlite3 texlive-full tree-sitter-cli zathura
 sudo apt purge vim
 sudo apt autoremove
 ```
