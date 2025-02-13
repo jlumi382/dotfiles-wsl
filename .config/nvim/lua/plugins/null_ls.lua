@@ -16,6 +16,7 @@ return {
                     "ruff",
                     "clang-format",
                     "prettierd",
+                    "eslint_d",
                     "pint",
                 },
                 automatic_installation = true,
